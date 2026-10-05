@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZapCast options</title>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body class="wide">
+  <main class="shell">
+    <header><strong>ZapCast data</strong><button id="export">Export CSV</button></header>
+    <section class="card">
+      <h2>Import contacts</h2>
+      <p>CSV headers: Name, Phone, Groups. Google/Outlook style names are accepted when possible.</p>
+      <input id="csv" type="file" accept=".csv,text/csv">
+      <pre id="import-status"></pre>
+    </section>
+    <section class="card">
+      <h2>Template variables</h2>
+      <div class="row"><input id="var-key" placeholder="signature"><input id="var-value" placeholder="Sent by ZapCast"><button id="save-var">Save</button></div>
+      <ul id="vars"></ul>
+    </section>
+    <section class="card">
+      <h2>Contacts</h2>
+      <ul id="contacts"></ul>
+    </section>
+  </main>
+  <script type="module" src="src/options.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+:root { color-scheme: light dark; font: 14px/1.45 system-ui, -apple-system, Segoe UI, sans-serif; }
+body { margin: 0; min-width: 360px; color: CanvasText; background: Canvas; }
+body.wide { min-width: 720px; }
+.shell { display: grid; gap: 14px; padding: 16px; }
+header, .row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+label { display: grid; gap: 6px; font-weight: 600; }
+input, select, textarea, button { font: inherit; border: 1px solid color-mix(in srgb, CanvasText 25%, transparent); border-radius: 10px; padding: 9px 10px; background: Canvas; color: CanvasText; }
+textarea { resize: vertical; }
+button { cursor: pointer; background: #25d366; color: #082013; border: 0; font-weight: 700; }
+button + button { background: color-mix(in srgb, CanvasText 12%, Canvas); color: CanvasText; }
+.card { border: 1px solid color-mix(in srgb, CanvasText 14%, transparent); border-radius: 14px; padding: 12px; }
+ul { margin: 0; padding-left: 18px; max-height: 260px; overflow: auto; }
+pre, #status { white-space: pre-wrap; color: color-mix(in srgb, CanvasText 75%, transparent); }

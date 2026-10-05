@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZapCast</title>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <strong>ZapCast</strong>
+      <span id="count">0 contacts</span>
+    </header>
+    <label>Group
+      <select id="group"><option value="">All contacts</option></select>
+    </label>
+    <label>Message
+      <textarea id="message" rows="7" placeholder="Hi {name}, ..."></textarea>
+    </label>
+    <div class="row">
+      <label>Delay ms<input id="delay" type="number" min="250" max="30000" step="250"></label>
+      <label>Mode<select id="mode"><option value="confirm">Prepare only</option><option value="auto">Auto-send</option></select></label>
+    </div>
+    <button id="start">Start broadcast</button>
+    <button id="options">Contacts & templates</button>
+    <p id="status" role="status"></p>
+  </main>
+  <script type="module" src="src/popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "ZapCast for WhatsApp Web",
+  "short_name": "ZapCast",
+  "version": "0.1.0",
+  "description": "Manage contacts, templates and safe paced broadcasts directly on WhatsApp Web.",
+  "action": {
+    "default_title": "ZapCast",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "permissions": ["storage", "tabs", "scripting"],
+  "host_permissions": ["https://web.whatsapp.com/*"],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
